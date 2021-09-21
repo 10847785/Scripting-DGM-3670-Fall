@@ -1,0 +1,19 @@
+string $objects[];
+
+string $item[];
+int $count = stringArrayCount("3, $array1);
+stringArrayCount(0, $item, $item[0]);
+
+if ($number == 3)
+{
+    print ("This is 3!");
+}
+else if ($number == 5)
+{
+    print ("This is 5");
+}
+else
+{
+    print ("This is not a 5 this is a 3!!!");
+}
+//stringArrayInsertAtIndex(0, $objects, $temp[0]);

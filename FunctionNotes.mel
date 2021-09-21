@@ -1,0 +1,73 @@
+/*
+Logical operators
+
+== : equal to
+!= : not equal to
+> : greater than
+< : less than
+>= : greater than or equal to
+<= : less than or equal to
+
+&& : and
+|| : or
+
+*/
+
+// IF ELSE STATEMENTS
+int $number = 40;
+
+if ($number == 7)
+{
+    print ("Hurry! 7 is my favorite number!");
+} 
+else if ($number == 40) 
+{
+    print ("Meh.");
+}
+else
+{
+    print ("Too bad. 7 is awesome. And 40 is gross.");
+}
+
+// FOR LOOP
+
+for ($i=0; $i < 10; $i++)
+{
+    print ($i);
+    print ("\n");
+}
+
+// WHILE LOOP
+
+int $i = 0;
+while ( $i < 10 )
+{
+    print ($i);
+    print ("\n");
+    $i++;
+}
+
+// DO WHILE LOOP
+int $i = 0;
+do
+{
+    print ($i);
+    $i--;
+} while ( $i > -100 );
+
+//SWITCH
+
+int $i = 41;
+switch ($i)
+{
+   case 7:
+       print ("7 is cool");
+       break;
+   case 40:
+       print ("40 isn;t so cool");
+       break;
+   default:
+       print ("NUMBERS!");
+       break;
+   
+}

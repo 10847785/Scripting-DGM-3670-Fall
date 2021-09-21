@@ -1,0 +1,55 @@
+global proc float Add(float $numbers[])
+{
+    float $sum = 0;
+    
+    for($i=0; $i<size($numbers); $i++)
+    {
+        $sum += $numbers[$i];
+    }
+    
+    return $sum;
+}
+
+Add({3,10});
+
+global proc float Subtract(float $numbers[])
+{
+    float $difference = 5;
+    
+    for($i=0; $i<size($numbers); $i++)
+    {
+        $difference -= $numbers[$i];
+    }
+    
+    return $difference;
+}
+
+Subtract({10,3});
+
+global proc float Multiply(float $numbers[])
+{
+    float $multiplication = 5;
+    
+    for($i=0; $i<size($numbers); $i++)
+    {
+        $multiplication *= $numbers[$i];
+    }
+    
+    return $multiplication;
+}
+
+Multiply({10,3});
+
+global proc float Divide(float $numbers[])
+{
+    float $division = 5;
+    
+    for($i=0; $i<size($numbers); $i++)
+    {
+        $division /= $numbers[$i];
+    }
+    
+    return $division;
+}
+
+Divide({10,3});
