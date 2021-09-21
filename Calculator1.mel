@@ -1,6 +1,6 @@
 global proc float Add(float $numbers[])
 {
-    float $sum = 0;
+    float $sum = 2;
     
     for($i=0; $i<size($numbers); $i++)
     {
@@ -10,7 +10,17 @@ global proc float Add(float $numbers[])
     return $sum;
 }
 
-Add({3,10});
+/*if ($numbers = 13)
+{
+    
+}
+
+if else ($numbers = 7)
+{
+    
+}
+*/
+Add({3, 10});
 
 global proc float Subtract(float $numbers[])
 {
@@ -28,7 +38,7 @@ Subtract({10,3});
 
 global proc float Multiply(float $numbers[])
 {
-    float $multiplication = 5;
+    float $multiplication = 2;
     
     for($i=0; $i<size($numbers); $i++)
     {
@@ -38,11 +48,11 @@ global proc float Multiply(float $numbers[])
     return $multiplication;
 }
 
-Multiply({10,3});
+Multiply({5,2});
 
 global proc float Divide(float $numbers[])
 {
-    float $division = 5;
+    float $division = 6;
     
     for($i=0; $i<size($numbers); $i++)
     {
@@ -52,4 +62,4 @@ global proc float Divide(float $numbers[])
     return $division;
 }
 
-Divide({10,3});
+Divide({2,2});
