@@ -120,5 +120,46 @@ for ($i=0; $i <sort($numbers); $i++)
 //return values[index]
 //find the mode with a for loop
 
+//Possible solution???
+int $numbers[] = {4,6,5,2,1,2,4,2,6};
+$numInts = sort($numbers);
+if[0] !=[i], Z++
+{
+    
+}
+else
+{
+    freq[][z]
+    num[]
+}
 
+//Median Better
+global proc float Median(float $numbers[])
+{
+    float $medianValue;
+    int $size = size($numbers);
+    
+    $numbers = sort($numbers);
+    
+    if ($size % 2 == 0)
+    {
+        //even number
+        int $highIndex = ($size / 2);
+        int $lowIndex = $highIndex - 1;
+        $medianValue = ($numbers[$highIndex] + $numbers[$lowIndex]) / 2;
+    }
+    
+    else
+    {
+        //odd number
+        int $index = ($size -1) / 2;
+        $medianValue = $numbers[$index];
+    }
+    
+    return $medianValue;
+}
+
+Median({1,3,7,12,4,-12});
+
+//Mode Better
 
