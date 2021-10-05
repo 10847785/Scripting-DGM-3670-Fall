@@ -1,3 +1,4 @@
+//Add
 global proc float Add(float $numbers[])
 {
     float $sum = 0;
@@ -12,6 +13,7 @@ global proc float Add(float $numbers[])
 
 Add({3, 10});
 
+//Subtract
 global proc float Subtract(float $numbers[])
 {
     float $difference = 0;
@@ -26,6 +28,7 @@ global proc float Subtract(float $numbers[])
 
 Subtract({10,-4});
 
+//Multiply
 global proc float Multiply(float $numbers[])
 {
     float $multiplication = 1;
@@ -40,6 +43,7 @@ global proc float Multiply(float $numbers[])
 
 Multiply({5,5});
 
+//Divide
 global proc float Divide(float $numbers[])
 {
     float $division = 6;
@@ -55,21 +59,21 @@ global proc float Divide(float $numbers[])
 Divide({12,2});
 
 //Power
-power (x, n);
-//for loop
-
-float $a = 3;
-//int n = 2;
-//float $power = $a;
-for (i=0; $i < n; i++)
+global proc float Power(float $numbers[])
 {
-    $a = n[$i];
+    float $power = ($numbers[0]);
+    float $sum = ($numbers[1]);
+    
+    for($i=1; $i<$sum; $i++)
+    {
+        $numbers[0] = $numbers[0] * $power;
+    }
+    
+    return $numbers[0];
 }
+Power({2,3});
 
-return $i;
-
-
-//Mean Better
+//Mean
 global proc float Mean(float $numbers[])
 {
     float $meanValue;
@@ -86,7 +90,7 @@ global proc float Mean(float $numbers[])
 }
 
 Mean({6,5,7,9,3});
-//Median Better
+//Median
 global proc float Median(float $numbers[])
 {
     float $medianValue;
@@ -114,7 +118,7 @@ global proc float Median(float $numbers[])
 
 Median({1,3,7,12,4,-12});
 
-//Mode Better
+//Mode
 global proc float[] Mode(float $numbers[])
 {
     float $mode[];
@@ -169,17 +173,6 @@ global proc float[] Mode(float $numbers[])
 Mode ({4,7,2,9,1,4,7,8,4});
 
 //Calcuator
-
-//Arguments
- //numbers (Array)
- //Operation
- 
-//.... proc Calculator (float $numbers[], int $operation)
-   //if(operation == 0)
-   //{
-       //Add($numbers)
-         //Pretty Print
-   //}
 global proc Calculator(float $numbers[], string $operation)
 {
     
@@ -197,11 +190,31 @@ global proc Calculator(float $numbers[], string $operation)
     {
         print (Multiply($numbers));
     }
+    
     if($operation == "Divide")
     {
         print (Divide($numbers));
     }
     
+    if($operation == "Power")
+    {
+        print (Power($numbers));
+    }
+    
+    if($operation == "Mean")
+    {
+        print (Mean($numbers));
+    }
+    
+    if($operation == "Median")
+    {
+        print (Median($numbers));
+    }
+    
+    if($operation == "Mode")
+    {
+        print (Mode($numbers));
+    }
    
 }
 
@@ -209,11 +222,7 @@ Calculator({4,3}, "Add");
 Calculator({5,-4}, "Subtract");
 Calculator({2,5}, "Multiply");
 Calculator({6,2}, "Divide");
-Add({4,3});
-Subtract({5,-4});
-Multiply({2,5});
-Divide({6,2});
-
-Mean({4,9,2,6,1});
-Median({1,3,7,12,4,-12});
-Mode ({4,7,2,9,1,4,7,8,4});
+Calculator({3,4}, "Power");
+Calculator({4,7,2,6,1}, "Mean");
+Calculator({1,3,7,12,4,-12}, "Median");
+Calculator({4,7,2,9,1,4,7,8,4}, "Mode");
