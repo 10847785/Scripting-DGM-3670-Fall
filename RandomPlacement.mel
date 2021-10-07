@@ -1,0 +1,27 @@
+// 1st - Make a selection
+
+//Function Randomize(int $amount,float $minX, $minY, $minZ float $maxX, $maxY, $maxZ)
+//String $objects[] = |s -s|
+// (select objects before running function) The polygons
+// for($i = 0; $< size($objects);$i++)
+  //for($j = 0; $j < $amount; $j++)
+//string $dup = duplicate $object[$i]
+
+// for(size($objects))
+//generarte random balues (x,y,z)
+  // float $x = rand $minX, $maxX
+  // float $y = rand $minY, $maxY
+  // float $Z = rand $minZ, $maxZ
+  
+  // $dup transform is ($x, $y, $z)
+
+Randomize(int $amount, float $minX, $minY, $minZ, float $maxX, $maxY, $maxZ)
+{
+    string $objects[] = |s -s|
+    
+    for($i = 0; $i < size($objects); $i++)
+    {
+        for($j = 0; $j < $amount; $j++)
+    }
+
+}
