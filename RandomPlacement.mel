@@ -1,46 +1,24 @@
-// 1st - Make a selection
-
-//Function Randomize(int $amount,float $minX, $minY, $minZ float $maxX, $maxY, $maxZ)
-//String $objects[] = ls -sl
-// (select objects before running function) The polygons
-// for($i = 0; $< size($objects);$i++)
-  //for($j = 0; $j < $amount; $j++)
-//string $dup = duplicate $object[$i]
-
-// for(size($objects))
-//generarte random balues (x,y,z)
-  // float $x = rand $minX, $maxX
-  // float $y = rand $minY, $maxY
-  // float $Z = rand $minZ, $maxZ
-  
-  // $dup transform is ($x, $y, $z)
-
 CreatePolygonSphere;
-select -r pSphere1;
+select -r -all;
 
 global proc Randomize(int $amount, float $minX, float $minY, float $minZ, float $maxX, float $maxY, float $maxZ)
 {    
-    string $objects[] = `ls -sl`;    
-    
+    string $objects[] = `ls-sl`;    
+
         
     for($i = 0; $i < size($objects); $i++)
     {
         for($j = 0; $j < $amount; $j++)
         {
-            string $dup = $object[$i];
-            {
-                float $x = `rand $minX $maxX`;
-                float $y = `rand $minY $maxY`;
-                float $z = `rand $minZ $maxZ`;
-            }
-        
-          /*  float $x = `rand $minX $maxX`;
+            string $dup[] = `duplicate $objects[$i]`;
+            
+            float $x = `rand $minX $maxX`;
             float $y = `rand $minY $maxY`;
-            float $z = `rand $minZ $maxZ`; */
-        }
-        
-        
-    }    
+            float $z = `rand $minZ $maxZ`;
+            move $x $y $z $dup[0];
 
+               
+        }               
+    }  
 }
-//$dup transform ($x, $y, $z);
+Randomize(1, 0, 50, 0, 50, 0, 50);
