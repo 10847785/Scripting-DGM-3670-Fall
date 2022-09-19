@@ -1,0 +1,6 @@
+string $selection[] = `ls -selection`;
+
+for ($sel in $selection)
+{
+    setAttr ($sel + ".segmentScaleCompensate") 0;
+}
